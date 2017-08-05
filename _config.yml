@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+title: EOdream博客
+subtitle: 身处阳光中总能看见太阳，不是吗？
+description: 人类遗传基因数据库
+author: Dikang Li
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.andylistudio.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -77,4 +77,12 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: ftpsync
+  host: 127.0.0.1            #主机地址
+  user: andyliwr             #用户名
+  pass: 121960425wr          #密码
+  remote: /blog/                   #上传到空间的指定目录。比如/public_html/。默认为/
+  port: 21                   #端口，默认为21
+  ignore:                    #忽略的文件
+  connections: 1             #使用的连接数，默认1
+  verbose: true             #显示调试信息，默认false
