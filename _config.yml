@@ -77,12 +77,18 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ftpsync
-  host: 127.0.0.1            #主机地址
-  user: andyliwr             #用户名
-  pass: 121960425wr          #密码
-  remote: /blog/                   #上传到空间的指定目录。比如/public_html/。默认为/
-  port: 21                   #端口，默认为21
-  ignore:                    #忽略的文件
-  connections: 1             #使用的连接数，默认1
-  verbose: true             #显示调试信息，默认false
+  # prod
+  type: sftp
+  host: 118.89.148.108
+  user: ubuntu
+  remotePath: /home/ubuntu/www/BehavioralGeneticsSQL_blog
+  port: 22
+  privateKey: /home/andyliwr/.ssh/id_rsa
+  # test
+  # type: sftp
+  # host: localhost
+  # user: andyliwr
+  # pass:   
+  # remotePath: /var/www/gene_blog
+  # port: 22
+  # privateKey: /home/andyliwr/.ssh/id_rsa
